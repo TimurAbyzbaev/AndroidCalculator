@@ -8,7 +8,10 @@
         <entry key="..\:/GeekBrains/secondQuarter/AndroidCalculator/app/src/main/res/drawable/incent.xml" value="0.2205" />
         <entry key="..\:/GeekBrains/secondQuarter/AndroidCalculator/app/src/main/res/drawable/rounded_button.xml" value="0.2205" />
         <entry key="..\:/GeekBrains/secondQuarter/AndroidCalculator/app/src/main/res/drawable/style.xml" value="0.2205" />
+        <entry key="..\:/GeekBrains/secondQuarter/AndroidCalculator/app/src/main/res/layout-land/activity_main.xml" value="0.2" />
         <entry key="..\:/GeekBrains/secondQuarter/AndroidCalculator/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/GeekBrains/secondQuarter/AndroidCalculator/app/src/main/res/layout/activity_main_horizontal.xml" value="0.358695652173913" />
+        <entry key="..\:/GeekBrains/secondQuarter/AndroidCalculator/app/src/main/res/layout/activity_main_landscape.xml" value="0.20572916666666666" />
       </map>
     </option>
   </component>
