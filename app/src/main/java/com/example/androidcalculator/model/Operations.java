@@ -5,8 +5,4 @@ public enum Operations {
     SUB,
     MULT,
     DIV,
-    AC,
-    PLUSMINUS,
-    PERCENT,
-    DOT
 }

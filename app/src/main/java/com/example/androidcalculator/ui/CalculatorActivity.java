@@ -14,7 +14,7 @@ import com.example.androidcalculator.model.Operations;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CalculatorActivity extends AppCompatActivity implements CalculatorView{
+public class CalculatorActivity extends AppCompatActivity implements CalculatorView {
 
     private TextView resultText;
     private CalculatorPresenter presenter;
