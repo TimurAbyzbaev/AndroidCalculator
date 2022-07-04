@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="calcOperationButton" format="reference"/>
+    <attr name="calcServiceButton" format="reference"/>
+</resources>

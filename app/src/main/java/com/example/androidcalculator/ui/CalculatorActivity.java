@@ -2,6 +2,7 @@ package com.example.androidcalculator.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,10 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences sharedPreferences = getSharedPreferences("themes.xml", MODE_PRIVATE);
+
+        int theme = sharedPreferences.getInt("theme", R.style.Theme_AndroidCalculator);
+        setTheme(theme);
         setContentView(R.layout.activity_main);
 
         resultText = findViewById(R.id.textView);
@@ -109,6 +114,26 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
                 presenter.onEqualsPressed();
             }
         });
+
+        findViewById(R.id.theme1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sharedPreferences.edit()
+                        .putInt("theme", R.style.Theme_AndroidCalculator)
+                        .commit();
+                recreate();
+            }
+        });
+        findViewById(R.id.theme2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sharedPreferences.edit()
+                        .putInt("theme", R.style.Theme2)
+                        .commit();
+                recreate();
+            }
+        });
+
 
     }
 

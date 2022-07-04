@@ -1,9 +1,12 @@
 package com.example.androidcalculator.ui;
 
+import android.util.Log;
+
 import com.example.androidcalculator.model.Calculator;
 import com.example.androidcalculator.model.Operations;
 
 import java.text.DecimalFormat;
+import java.util.logging.Logger;
 
 public class CalculatorPresenter {
 
@@ -24,22 +27,20 @@ public class CalculatorPresenter {
     public void onDigitPressed(int digit) {
 
         if (argTwo == null) {
-            if (!isFloat){
+            if (!isFloat) {
                 argOne = argOne * 10 + digit;
                 showNumberFormated(argOne);
-            }
-            else {
-                argOne = argOne + digit*Math.pow(10,iter);
+            } else {
+                argOne = argOne + digit * Math.pow(10, iter);
                 showNumberFormated(argOne);
                 iter--;
             }
         } else {
-            if (!isFloat){
+            if (!isFloat) {
                 argTwo = argTwo * 10 + digit;
                 showNumberFormated(argTwo);
-            }
-            else {
-                argTwo = argTwo + digit*Math.pow(10,iter);
+            } else {
+                argTwo = argTwo + digit * Math.pow(10, iter);
                 showNumberFormated(argTwo);
                 iter--;
             }
@@ -71,28 +72,26 @@ public class CalculatorPresenter {
     }
 
     public void onPlusMinusPressed() {
-        if (argTwo == null){
+        if (argTwo == null) {
             argOne = argOne * (-1);
             showNumberFormated(argOne);
-        }
-        else {
+        } else {
             argTwo = argTwo * (-1);
             showNumberFormated(argTwo);
         }
     }
 
     public void onPercentPressed() {
-        if(argTwo == null){
+        if (argTwo == null) {
             argOne /= 100;
             showNumberFormated(argOne);
-        }
-        else{
-            argTwo = argTwo* argOne/100;
+        } else {
+            argTwo = argTwo * argOne / 100;
         }
     }
 
     public void onEqualsPressed() {
-        if(selectedOperator != null){
+        if (selectedOperator != null) {
             argOne = calculator.perform(argOne, argTwo, selectedOperator);
             argTwo = null;
             selectedOperator = null;

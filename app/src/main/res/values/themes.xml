@@ -12,5 +12,19 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="materialButtonStyle">@style/CalcButton</item>
+        <item name="calcOperationButton">@style/CalcButton.CalcOperationButton</item>
+        <item name="calcServiceButton">@style/CalcButton.ServiceButton</item>
+
     </style>
+
+
+    <style name="Theme2" parent="Theme.AndroidCalculator">
+        <item name="materialButtonStyle">@style/CalcButton.V2</item>
+        <item name="calcOperationButton">@style/CalcButton.CalcOperationButton_V2</item>
+        <item name="calcServiceButton">@style/CalcButton.ServiceButton_V2</item>
+        <item name="fontFamily">@font/custom_font</item>
+    </style>
+
+
 </resources>
