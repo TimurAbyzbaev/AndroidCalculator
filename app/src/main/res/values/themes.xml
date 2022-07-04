@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.AndroidCalculator" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.AndroidCalculator" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -12,5 +12,23 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="materialButtonStyle">@style/CalcButton</item>
+        <item name="calcOperationButton">@style/CalcButton.CalcOperationButton</item>
+        <item name="calcServiceButton">@style/CalcButton.ServiceButton</item>
+        <item name="background">@color/white</item>
+        <item name="textColor">@color/black</item>
+
     </style>
+
+
+    <style name="Theme2" parent="Theme.AndroidCalculator">
+        <item name="materialButtonStyle">@style/CalcButton.V2</item>
+        <item name="calcOperationButton">@style/CalcButton.CalcOperationButton_V2</item>
+        <item name="calcServiceButton">@style/CalcButton.ServiceButton_V2</item>
+        <item name="fontFamily">@font/custom_font_3</item>
+        <item name="background">@color/black</item>
+        <item name="textColor">@color/white</item>
+    </style>
+
+
 </resources>

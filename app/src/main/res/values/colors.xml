@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="service_button">#787878</color>
+    <color name="mathematical_operations">#ff9933</color>
+    <color name="digit">#044477</color>
+    <color name="digit_V2">#4C4C4C</color>
+    <color name="mathematical_operations_V2">#4E6356</color>
+    <color name="service_button_V2">#646988</color>
 </resources>
