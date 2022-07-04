@@ -4,4 +4,5 @@
     <dimen name="commonMargin">5dp</dimen>
     <dimen name="commonTextSize">20sp</dimen>
     <dimen name="LandscapeTextSize">20sp</dimen>
+    <dimen name="textViewSize">30sp</dimen>
 </resources>

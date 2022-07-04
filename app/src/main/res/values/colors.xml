@@ -10,7 +10,7 @@
     <color name="service_button">#787878</color>
     <color name="mathematical_operations">#ff9933</color>
     <color name="digit">#044477</color>
-    <color name="digit_V2">#8E52B8</color>
-    <color name="mathematical_operations_V2">#1B5932</color>
-    <color name="service_button_V2">#584A13</color>
+    <color name="digit_V2">#4C4C4C</color>
+    <color name="mathematical_operations_V2">#4E6356</color>
+    <color name="service_button_V2">#646988</color>
 </resources>

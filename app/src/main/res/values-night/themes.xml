@@ -12,5 +12,10 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="materialButtonStyle">@style/CalcButton.V2</item>
+        <item name="calcOperationButton">@style/CalcButton.CalcOperationButton_V2</item>
+        <item name="calcServiceButton">@style/CalcButton.ServiceButton_V2</item>
+        <item name="background">@color/black</item>
+        <item name="textColor">@color/white</item>
     </style>
 </resources>

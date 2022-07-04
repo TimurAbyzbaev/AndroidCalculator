@@ -2,4 +2,6 @@
 <resources>
     <attr name="calcOperationButton" format="reference"/>
     <attr name="calcServiceButton" format="reference"/>
+    <attr name="background" format="reference"/>
+    <attr name="textColor" format="reference"/>
 </resources>

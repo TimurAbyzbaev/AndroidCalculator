@@ -15,6 +15,8 @@
         <item name="materialButtonStyle">@style/CalcButton</item>
         <item name="calcOperationButton">@style/CalcButton.CalcOperationButton</item>
         <item name="calcServiceButton">@style/CalcButton.ServiceButton</item>
+        <item name="background">@color/white</item>
+        <item name="textColor">@color/black</item>
 
     </style>
 
@@ -23,7 +25,9 @@
         <item name="materialButtonStyle">@style/CalcButton.V2</item>
         <item name="calcOperationButton">@style/CalcButton.CalcOperationButton_V2</item>
         <item name="calcServiceButton">@style/CalcButton.ServiceButton_V2</item>
-        <item name="fontFamily">@font/custom_font</item>
+        <item name="fontFamily">@font/custom_font_3</item>
+        <item name="background">@color/black</item>
+        <item name="textColor">@color/white</item>
     </style>
 
 
