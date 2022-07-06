@@ -4,210 +4,273 @@
 простому проектированию, а также такой подход не нагружает ресурсы.
 -->
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/background"
     tools:context=".ui.CalculatorActivity">
 
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="262dp"
-        android:layout_marginTop="20dp"
-        android:gravity="bottom"
+        android:layout_height="wrap_content"
         android:text="@string/startText"
         android:textAlignment="viewEnd"
         android:textColor="?attr/textColor"
         android:textSize="@dimen/textViewSize"
-        tools:ignore="RtlCompat" />
+        app:layout_constraintBottom_toTopOf="@+id/theme2"
+        tools:layout_editor_absoluteX="0dp" />
 
-    <GridLayout
-        android:layout_width="match_parent"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/theme1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="320dp">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/theme1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="@string/theme_1" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/theme2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="@string/theme_2" />
+        android:layout_margin="5dp"
+        android:text="@string/theme_1"
+        app:layout_constraintBottom_toTopOf="@+id/ac"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
-    </GridLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/theme2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/theme_2"
+        app:layout_constraintBottom_toTopOf="@+id/plusMinus"
+        app:layout_constraintStart_toEndOf="@+id/theme1" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/percent"
+        style="?attr/calcServiceButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/commonMargin"
+        android:layout_marginBottom="8dp"
+        android:text="@string/percent"
+        app:layout_constraintBottom_toTopOf="@+id/nine"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toEndOf="@id/plusMinus" />
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="380dp"
-        android:columnCount="4">
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/five"
+        style="@style/Theme.AndroidCalculator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/commonMargin"
+        android:layout_marginBottom="8dp"
+        android:text="@string/five"
+        app:layout_constraintBottom_toTopOf="@+id/two"
+        app:layout_constraintEnd_toStartOf="@+id/six"
+        app:layout_constraintStart_toEndOf="@id/four" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/ac"
-            style="?attr/calcServiceButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/commonMargin"
-            android:text="@string/AC" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/minus"
+        style="?attr/calcOperationButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/commonMargin"
+        android:layout_marginBottom="8dp"
+        android:text="@string/minus"
+        app:layout_constraintBottom_toTopOf="@+id/plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/six" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/plusMinus"
-            style="?attr/calcServiceButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/commonMargin"
-            android:text="@string/plusMinus" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/equals"
+        style="?attr/calcOperationButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/commonMargin"
+        android:layout_marginBottom="44dp"
+        android:text="@string/equals"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dot" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/percent"
-            style="?attr/calcServiceButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/commonMargin"
-            android:text="@string/percent" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ac"
+        style="?attr/calcServiceButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/commonMargin"
+        android:layout_marginBottom="76dp"
+        android:text="@string/AC"
+        app:layout_constraintBottom_toTopOf="@+id/seven"
+        app:layout_constraintEnd_toStartOf="@+id/plusMinus"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/divider"
-            style="?attr/calcOperationButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/commonMargin"
-            android:text="@string/divider" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/one"
+        style="@style/Theme.AndroidCalculator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/commonMargin"
+        android:layout_marginBottom="4dp"
+        android:text="@string/one"
+        app:layout_constraintBottom_toTopOf="@+id/zero"
+        app:layout_constraintEnd_toStartOf="@+id/two"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/seven"
-            style="@style/Theme.AndroidCalculator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/commonMargin"
-            android:text="@string/seven" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/nine"
+        style="@style/Theme.AndroidCalculator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/commonMargin"
+        android:layout_marginBottom="8dp"
+        android:text="@string/nine"
+        app:layout_constraintBottom_toTopOf="@+id/six"
+        app:layout_constraintEnd_toStartOf="@+id/multiplication"
+        app:layout_constraintStart_toEndOf="@id/eight" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/eight"
-            style="@style/Theme.AndroidCalculator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/commonMargin"
-            android:text="@string/eight" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/seven"
+        style="@style/Theme.AndroidCalculator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/commonMargin"
+        android:layout_marginBottom="8dp"
+        android:text="@string/seven"
+        app:layout_constraintBottom_toTopOf="@+id/four"
+        app:layout_constraintEnd_toStartOf="@+id/eight"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/nine"
-            style="@style/Theme.AndroidCalculator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/commonMargin"
-            android:text="@string/nine" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/two"
+        style="@style/Theme.AndroidCalculator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/commonMargin"
+        android:layout_marginBottom="4dp"
+        android:text="@string/two"
+        app:layout_constraintBottom_toTopOf="@+id/zero"
+        app:layout_constraintEnd_toStartOf="@+id/three"
+        app:layout_constraintStart_toEndOf="@id/one" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/multiplication"
-            style="?attr/calcOperationButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/commonMargin"
-            android:text="@string/multiplication" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/three"
+        style="@style/Theme.AndroidCalculator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/commonMargin"
+        android:layout_marginBottom="4dp"
+        android:text="@string/three"
+        app:layout_constraintBottom_toTopOf="@+id/dot"
+        app:layout_constraintEnd_toStartOf="@+id/plus"
+        app:layout_constraintStart_toEndOf="@id/two" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/four"
-            style="@style/Theme.AndroidCalculator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/commonMargin"
-            android:text="@string/four" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/eight"
+        style="@style/Theme.AndroidCalculator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/commonMargin"
+        android:layout_marginBottom="8dp"
+        android:text="@string/eight"
+        app:layout_constraintBottom_toTopOf="@+id/five"
+        app:layout_constraintEnd_toStartOf="@+id/nine"
+        app:layout_constraintStart_toEndOf="@id/seven" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/plus"
+        style="?attr/calcOperationButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/commonMargin"
+        android:layout_marginBottom="4dp"
+        android:text="@string/plus"
+        app:layout_constraintBottom_toTopOf="@+id/equals"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/three" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/five"
-            style="@style/Theme.AndroidCalculator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/commonMargin"
-            android:text="@string/five" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/four"
+        style="@style/Theme.AndroidCalculator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/commonMargin"
+        android:layout_marginBottom="8dp"
+        android:text="@string/four"
+        app:layout_constraintBottom_toTopOf="@+id/one"
+        app:layout_constraintEnd_toStartOf="@+id/five"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/six"
-            style="@style/Theme.AndroidCalculator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/commonMargin"
-            android:text="@string/six" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dot"
+        style="@style/Theme.AndroidCalculator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/commonMargin"
+        android:layout_marginBottom="44dp"
+        android:text="@string/dot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/equals"
+        app:layout_constraintStart_toEndOf="@id/zero" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/minus"
-            style="?attr/calcOperationButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/commonMargin"
-            android:text="@string/minus" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/six"
+        style="@style/Theme.AndroidCalculator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/commonMargin"
+        android:layout_marginBottom="8dp"
+        android:text="@string/six"
+        app:layout_constraintBottom_toTopOf="@+id/three"
+        app:layout_constraintEnd_toStartOf="@+id/minus"
+        app:layout_constraintStart_toEndOf="@id/five" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/one"
-            style="@style/Theme.AndroidCalculator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/commonMargin"
-            android:text="@string/one" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/zero"
+        style="@style/Theme.AndroidCalculator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/commonMargin"
+        android:text="@string/zero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dot"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/two"
-            style="@style/Theme.AndroidCalculator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/commonMargin"
-            android:text="@string/two" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/multiplication"
+        style="?attr/calcOperationButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/commonMargin"
+        android:layout_marginBottom="8dp"
+        android:text="@string/multiplication"
+        app:layout_constraintBottom_toTopOf="@+id/minus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/nine" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/three"
-            style="@style/Theme.AndroidCalculator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/commonMargin"
-            android:text="@string/three" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/plusMinus"
+        style="?attr/calcServiceButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/commonMargin"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="76dp"
+        android:text="@string/plusMinus"
+        app:layout_constraintBottom_toTopOf="@+id/eight"
+        app:layout_constraintEnd_toStartOf="@+id/percent"
+        app:layout_constraintStart_toEndOf="@id/ac" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/divider"
+        style="?attr/calcOperationButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/commonMargin"
+        android:layout_marginBottom="8dp"
+        android:text="@string/divider"
+        app:layout_constraintBottom_toTopOf="@+id/multiplication"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/percent" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/plus"
-            style="?attr/calcOperationButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/commonMargin"
-            android:text="@string/plus" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/zero"
-            style="@style/Theme.AndroidCalculator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnSpan="2"
-            android:layout_gravity="fill_horizontal"
-            android:layout_margin="@dimen/commonMargin"
-            android:text="@string/zero" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/dot"
-            style="@style/Theme.AndroidCalculator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/commonMargin"
-            android:text="@string/dot" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/equals"
-            style="?attr/calcOperationButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/commonMargin"
-            android:text="@string/equals" />
-
-    </GridLayout>
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

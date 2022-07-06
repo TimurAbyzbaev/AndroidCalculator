@@ -6,6 +6,7 @@
         <item name="android:textSize">@dimen/commonTextSize</item>
         <item name="android:layout_margin">@dimen/commonMargin</item>
         <item name="cornerRadius">20dp</item>
+
     </style>
 
     <style name="CalcButton.V2">
