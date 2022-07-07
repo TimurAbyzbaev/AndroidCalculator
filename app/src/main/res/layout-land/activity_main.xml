@@ -22,27 +22,18 @@
         android:textAlignment="viewEnd"
         android:textColor="?attr/textColor"
         android:textSize="@dimen/textViewSize"
-        app:layout_constraintBottom_toTopOf="@+id/theme2"
+        app:layout_constraintBottom_toTopOf="@+id/themeSelect"
         tools:layout_editor_absoluteX="0dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/theme1"
+        android:id="@+id/themeSelect"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/commonMargin"
-        android:text="@string/theme_1"
+        android:text="@string/Select_theme"
         app:layout_constraintBottom_toTopOf="@+id/ac"
         app:layout_constraintStart_toStartOf="parent" />
 
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/theme2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/commonMargin"
-        android:text="@string/theme_2"
-        app:layout_constraintBottom_toTopOf="@+id/plusMinus"
-        app:layout_constraintStart_toEndOf="@+id/theme1" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/percent"

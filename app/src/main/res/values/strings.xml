@@ -19,8 +19,10 @@
     <string name="eight">8</string>
     <string name="nine">9</string>
     <string name="zero">0</string>
-    <string name="theme_1">theme 1</string>
-    <string name="theme_2">theme 2</string>
+    <string name="Select_theme">Select theme</string>
+    <string name="theme_1">Light</string>
+    <string name="theme_2">Dark</string>
     <string name="theme_3">theme 3</string>
     <string name="startText">0</string>
+    <string name="click_me">CLICk ME</string>
 </resources>
