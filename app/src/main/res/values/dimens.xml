@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="commonMargin">5dp</dimen>
+    <dimen name="commonTextSize">20sp</dimen>
+    <dimen name="LandscapeTextSize">20sp</dimen>
+    <dimen name="textViewSize">30sp</dimen>
+</resources>

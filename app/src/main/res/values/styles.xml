@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CalcButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/digit</item>
+        <item name="android:textSize">@dimen/commonTextSize</item>
+        <item name="android:layout_margin">@dimen/commonMargin</item>
+        <item name="cornerRadius">20dp</item>
+
+    </style>
+
+    <style name="CalcButton.V2">
+        <item name="backgroundTint">@color/digit_V2</item>
+    </style>
+    <style name="CalcButton.CalcOperationButton_V2">
+        <item name="backgroundTint">@color/mathematical_operations_V2</item>
+    </style>
+    <style name="CalcButton.ServiceButton_V2">
+        <item name="backgroundTint">@color/service_button_V2</item>
+    </style>
+
+    <style name="CalcButton.CalcOperationButton">
+        <item name="backgroundTint">@color/mathematical_operations</item>
+    </style>
+
+    <style name="CalcButton.ServiceButton">
+        <item name="backgroundTint">@color/service_button</item>
+    </style>
+
+</resources>
