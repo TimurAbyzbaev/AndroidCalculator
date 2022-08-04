@@ -40,7 +40,8 @@ public class ThemeRepositoryImpl implements ThemeRepository {
     @Override
     public void saveTheme(Theme theme) {
         preferences.edit()
-                .putString(KEY_THEME, theme.getKey());
+                .putString(KEY_THEME, theme.getKey())
+                .apply();
     }
 
     @Override
